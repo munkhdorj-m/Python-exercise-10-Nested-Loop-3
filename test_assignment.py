@@ -16,9 +16,9 @@ def check_contains_loop(function):
         "4  5  6 \n"
         "7  8  9 \n"
     ),(
-        "1 2 3\n"
-        "4 5 6\n"
-        "7 8 9\n"
+        " 1 2 3\n"
+        " 4 5 6\n"
+        " 7 8 9\n"
     )),
     (5, (
         "1 2 3 4 5 \n"
@@ -27,8 +27,8 @@ def check_contains_loop(function):
         "16 17 18 19 20 \n"
         "21 22 23 24 25 \n"
     ),(
-        "1  2  3  4  5 \n"
-        "6  7  8  9  10 \n"
+        " 1  2  3  4  5 \n"
+        " 6  7  8  9 10 \n"
         "11 12 13 14 15 \n"
         "16 17 18 19 20 \n"
         "21 22 23 24 25 \n"
@@ -40,7 +40,7 @@ def check_contains_loop(function):
         "21 22 23 24 25\n"
     )),
 ])
-def test1(capsys,n, expected1,expected2,expected3):
+def test1(capsys, n, expected1, expected2, expected3):
     print_pattern_1(n)
     captured = capsys.readouterr()
     assert captured.out == expected1 or captured.out == expected2 or captured.out == expected3 
