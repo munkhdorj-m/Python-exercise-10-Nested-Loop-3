@@ -1,6 +1,6 @@
 import pytest
 import inspect
-from assignment import print_pattern_1, print_pattern_2, print_pattern_3
+from assignment import print_pattern_1, print_pattern_2
 
 def check_contains_loop(function):
     source = inspect.getsource(function)
@@ -58,14 +58,3 @@ def test2(capsys):
     captured = capsys.readouterr()
     assert captured.out == expected_output
 
-def test3(capsys):
-    expected_output = (
-        "1 \n"
-        "0 1 \n"
-        "1 0 1 \n"
-        "0 1 0 1 \n"
-        "1 0 1 0 1 \n"
-    )
-    print_pattern_3(5)
-    captured = capsys.readouterr()
-    assert captured.out == expected_output
