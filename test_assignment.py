@@ -45,15 +45,63 @@ def test1(capsys, n, expected1, expected2, expected3):
     captured = capsys.readouterr()
     assert captured.out == expected1 or captured.out == expected2 or captured.out == expected3 
 
-def test2(capsys):
-    expected_output = (
-        "    1 \n"
-        "   2 2 \n"
-        "  3 3 3 \n"
-        " 4 4 4 4 \n"
-        "5 5 5 5 5 \n"
-    )
-    print_pattern_2(5)
+@pytest.mark.parametrize("n, expected1, expected2", [
+    (1, (
+        "1 \n"
+    ),(
+        "1\n"
+    )),
+    (2, (
+        "2 2 \n"
+        "2 2 \n"
+    ),(
+        "22\n"
+        "22\n"
+    )),
+    (3, (
+        "3 3 3 \n"
+        "3 * 3 \n"
+        "3 3 3 \n"
+    ),(
+        "333\n"
+        "3*3\n"
+        "333\n"
+    )),
+    (4, (
+        "4 4 4 4 \n"
+        "4 * * 4 \n"
+        "4 * * 4 \n"
+        "4 4 4 4 \n"
+    ),(
+        "4444\n"
+        "4**4\n"
+        "4**4\n"
+        "4444\n"
+    )),
+    (9, (
+        "9 9 9 9 9 9 9 9 9 \n"
+        "9 * * * * * * * 9 \n"
+        "9 * * * * * * * 9 \n"
+        "9 * * * * * * * 9 \n"
+        "9 * * * * * * * 9 \n"
+        "9 * * * * * * * 9 \n"
+        "9 * * * * * * * 9 \n"
+        "9 * * * * * * * 9 \n"
+        "9 9 9 9 9 9 9 9 9 \n"
+    ),(
+        "999999999\n"
+        "9*******9\n"
+        "9*******9\n"
+        "9*******9\n"
+        "9*******9\n"
+        "9*******9\n"
+        "9*******9\n"
+        "9*******9\n"
+        "999999999\n"
+    )),
+])
+def test2(capsys, n, expected1, expected2):
+    print_pattern_2(n)
     captured = capsys.readouterr()
-    assert captured.out == expected_output
+    assert captured.out == expected1 or captured.out == expected2
 
