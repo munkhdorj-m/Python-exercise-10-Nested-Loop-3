@@ -10,7 +10,3 @@ def print_pattern_2(n):
     # Write your code here
     pass
 
-# Exercise 3
-def print_pattern_3(n):
-    # Write your code here
-    pass
