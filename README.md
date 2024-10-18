@@ -1,4 +1,4 @@
-# Python NESTED LOOP 2
+# Python NESTED LOOP 3
 
 Python Nested Loop PDF:
 https://drive.google.com/file/d/1RLtJoZs6p5zrJi6IZ79tS-NTlhFuO4vw/view?usp=sharing
@@ -14,13 +14,19 @@ Print below pattern with given n:
 
 **Example:**
 
+ 	Input: 3
+  	Output: 
+	1 2 3
+ 	4 5 6
+  	7 8 9
+      
  	Input: 5
   	Output: 
-	1
-	2 2
-	3 3 3
-	4 4 4 4
- 	5 5 5 5 5
+	1  2  3  4  5 
+ 	6  7  8  9  10
+   	11 12 13 14 15
+    	16 17 18 19 20 
+     	21 22 23 24 25
 
 ---
 
@@ -32,30 +38,38 @@ Print below pattern with given n:
 
 **Example**
 
-	Input: 5
+	Input: 1
  	Output:
-	    1 
-	   2 2 
-	  3 3 3 
-	 4 4 4 4 
-	5 5 5 5 5
+	1
 
----
+ 	Input: 2
+ 	Output:
+	2 2
+ 	2 2
 
-## Exercise 3
+   	Input: 3
+ 	Output:
+	3 3 3
+ 	3 * 3
+  	3 3 3
 
-**Problem:**
+      	Input: 4
+ 	Output:
+	4 4 4 4
+ 	4 * * 4
+  	4 * * 4
+   	4 4 4 4
 
-Print below pattern with given n:
-
-**Example**
-
- 	Input: 5
-  	Output: 
-	1 
-	0 1
-	1 0 1 
-	0 1 0 1 
-	1 0 1 0 1
+        Input: 9
+ 	Output:
+	9 9 9 9 9 9 9 9 9 
+ 	9 * * * * * * * 9 
+   	9 * * * * * * * 9 
+     	9 * * * * * * * 9 
+       	9 * * * * * * * 9 
+	9 * * * * * * * 9 
+    	9 * * * * * * * 9 
+      	9 * * * * * * * 9 
+	9 9 9 9 9 9 9 9 9 
 
 ---
