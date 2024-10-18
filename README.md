@@ -54,14 +54,14 @@ Print below pattern with given n:
  	3 * 3
   	3 3 3
 
-      	Input: 4
+	Input: 4
  	Output:
 	4 4 4 4
  	4 * * 4
   	4 * * 4
    	4 4 4 4
 
-        Input: 9
+	Input: 9
  	Output:
 	9 9 9 9 9 9 9 9 9 
  	9 * * * * * * * 9 
