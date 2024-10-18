@@ -15,8 +15,7 @@ def check_contains_loop(function):
         "1  2  3 \n"
         "4  5  6 \n"
         "7  8  9 \n"
-    )
-    (
+    ),(
         "1 2 3\n"
         "4 5 6\n"
         "7 8 9\n"
