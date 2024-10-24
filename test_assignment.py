@@ -44,6 +44,8 @@ def test1(capsys, n, expected1, expected2, expected3):
     print_pattern_1(n)
     captured = capsys.readouterr()
     assert captured.out == expected1 or captured.out == expected2 or captured.out == expected3 
+    assert check_contains_loop(print_pattern_1)
+
 
 @pytest.mark.parametrize("n, expected1, expected2", [
     (1, (
@@ -104,4 +106,5 @@ def test2(capsys, n, expected1, expected2):
     print_pattern_2(n)
     captured = capsys.readouterr()
     assert captured.out == expected1 or captured.out == expected2
+    assert check_contains_loop(print_pattern_2)
 
